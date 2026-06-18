@@ -164,6 +164,7 @@ function Index() {
 
           <div className="mt-20 border-t border-border pt-10">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center">In good company</p>
+            <p className="mt-3 text-sm text-muted-foreground text-center max-w-2xl mx-auto">Trusted by global and regional brands for conference content, brand experiences and campaign delivery.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-x-10 gap-y-4 text-muted-foreground">
               {clients.map((c) => (
                 <span key={c} className="font-display text-xl md:text-2xl opacity-70 hover:opacity-100 transition">{c}</span>
