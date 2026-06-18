@@ -28,9 +28,9 @@ const services = [
 ];
 
 const work = [
-  { img: work1, tag: "Brand Experience", title: "SAB — Evolving Firsts" },
-  { img: work2, tag: "Global Conference", title: "Heineken — Make It Personal" },
-  { img: work3, tag: "Brand System", title: "Marriott Residences JVC" },
+  { img: work1, tag: "Brand Experience", title: "SAB — Evolving Firsts", blurb: "Heritage brand storytelling and exhibition design for Saudi Awwal Bank's flagship experience centre in Riyadh." },
+  { img: work2, tag: "Global Conference", title: "Heineken — Make It Personal", blurb: "Stage design, motion graphics and on-screen branding for Heineken Beverages' 2025 Marketing & Distribution Conference." },
+  { img: work3, tag: "Brand System", title: "Marriott Residences JVC", blurb: "Visual identity, sales collateral and CGI-led brand content for the Marriott Residences JVC property launch in Dubai." },
 ];
 
 const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce", "Event Lab"];
