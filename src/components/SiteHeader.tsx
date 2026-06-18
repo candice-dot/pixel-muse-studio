@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between glass rounded-none">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo.url} alt="Pixel Ink Studio" width={36} height={36} className="h-9 w-9 object-contain" />
+          <img src={logo} alt="Pixel Ink Studio" width={36} height={36} className="h-9 w-9 object-contain" />
           <span className="font-display text-lg font-semibold tracking-tight">
             Pixel<span className="text-gradient">Ink</span>
           </span>
