@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import logo from "@/assets/pixel-ink-logo.png.asset.json";
+import logo from "@/assets/pixel-ink-logo.png";
 
 const nav = [
   { to: "/work", label: "Work" },
