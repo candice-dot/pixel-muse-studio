@@ -156,6 +156,7 @@ function Index() {
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{w.tag}</span>
                   <h3 className="font-display mt-2 text-xl font-semibold">{w.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{w.blurb}</p>
                 </div>
               </Link>
             ))}
