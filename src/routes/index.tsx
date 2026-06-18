@@ -184,9 +184,12 @@ function Index() {
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
             Tell us what you're building — we'll come back with a point of view, a plan and a timeline.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
-              Get in touch <ArrowUpRight className="size-4" />
+          <div className="mt-10 flex flex-col items-center gap-4">
+            <a href="https://calendar.app.google/6jfQyEupZtq9gU5aA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
+              Book a 15-minute call <ArrowUpRight className="size-4" />
+            </a>
+            <Link to="/contact" className="text-xs text-muted-foreground hover:text-foreground transition underline underline-offset-4">
+              Get in touch
             </Link>
           </div>
         </div>
