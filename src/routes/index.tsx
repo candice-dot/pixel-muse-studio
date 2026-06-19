@@ -28,9 +28,9 @@ const services = [
 ];
 
 const work = [
-  { img: work1, tag: "Brand Experience", title: "SAB — Evolving Firsts", blurb: "Heritage brand storytelling and exhibition design for Saudi Awwal Bank's flagship experience centre in Riyadh." },
-  { img: work2, tag: "Global Conference", title: "Heineken — Make It Personal", blurb: "Stage design, motion graphics and on-screen branding for Heineken Beverages' 2025 Marketing & Distribution Conference." },
-  { img: work3, tag: "Brand System", title: "Marriott Residences JVC", blurb: "Visual identity, sales collateral and CGI-led brand content for the Marriott Residences JVC property launch in Dubai." },
+  { img: work1, tag: "Brand Experience", title: "SAB — Evolving Firsts" },
+  { img: work2, tag: "Global Conference", title: "Heineken — Make It Personal" },
+  { img: work3, tag: "Brand System", title: "Marriott Residences JVC" },
 ];
 
 const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce", "Event Lab"];
@@ -156,7 +156,6 @@ function Index() {
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{w.tag}</span>
                   <h3 className="font-display mt-2 text-xl font-semibold">{w.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{w.blurb}</p>
                 </div>
               </Link>
             ))}
@@ -164,7 +163,6 @@ function Index() {
 
           <div className="mt-20 border-t border-border pt-10">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center">In good company</p>
-            <p className="mt-3 text-sm text-muted-foreground text-center max-w-2xl mx-auto">Trusted by global and regional brands for conference content, brand experiences and campaign delivery.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-x-10 gap-y-4 text-muted-foreground">
               {clients.map((c) => (
                 <span key={c} className="font-display text-xl md:text-2xl opacity-70 hover:opacity-100 transition">{c}</span>
@@ -184,12 +182,9 @@ function Index() {
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
             Tell us what you're building — we'll come back with a point of view, a plan and a timeline.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <a href="https://calendar.app.google/6jfQyEupZtq9gU5aA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
-              Book a 15-minute call <ArrowUpRight className="size-4" />
-            </a>
-            <Link to="/contact" className="text-xs text-muted-foreground hover:text-foreground transition underline underline-offset-4">
-              Get in touch
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
+              Get in touch <ArrowUpRight className="size-4" />
             </Link>
           </div>
         </div>
