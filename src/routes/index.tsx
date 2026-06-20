@@ -89,7 +89,7 @@ function Index() {
             <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
               View our work <ArrowUpRight className="size-4" />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-white/10 transition">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/5 transition">
               Start a conversation
             </a>
           </div>
@@ -252,7 +252,7 @@ function Index() {
             <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
               Book a 15-minute call <ArrowUpRight className="size-4" />
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-white/10 transition">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/5 transition">
               Send a brief
             </Link>
           </div>
