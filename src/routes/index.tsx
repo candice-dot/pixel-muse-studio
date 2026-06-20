@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
-import { ArrowUpRight, Compass, Palette, Film, CheckCircle2, Quote } from "lucide-react";
+import { ArrowUpRight, Compass, Palette, Film, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -59,13 +59,8 @@ const processSteps = [
   { step: "04", title: "Deliver & Scale", body: "Final production, on-site support and reusable assets." },
 ];
 
-const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce", "Event Lab"];
+const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce"];
 
-const testimonials = [
-  { quote: "Pixel Ink turned a complex global brief into a coherent, high-energy conference identity that held up across every stage and screen.", author: "Global Marketing Lead", company: "FMCG Brand" },
-  { quote: "Rare combination of strategic thinking and flawless execution — they delivered on time, on brand and beyond what we'd imagined.", author: "Brand Director", company: "Luxury Sector" },
-  { quote: "From first concept to live event, the team moved fast and held the quality bar. A genuine creative partner.", author: "Head of Events", company: "International Agency" },
-];
 
 function Index() {
   return (
@@ -165,7 +160,7 @@ function Index() {
 
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border shadow-card">
             <iframe
-              src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0"
+              src="https://player.vimeo.com/video/1126076436?title=0&byline=0&portrait=0"
               title="Pixel Ink Studio Showreel"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
@@ -241,30 +236,6 @@ function Index() {
         </div>
       </section>
 
-      {/* 8. Testimonials */}
-      <section id="testimonials" className="relative bg-gradient-surface scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-          <div className="max-w-2xl mb-14">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Testimonials</p>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-              What partners <span className="text-gradient">say.</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {testimonials.map((t) => (
-              <figure key={t.author} className="glass rounded-2xl p-8 shadow-card">
-                <Quote className="size-6 text-primary" />
-                <blockquote className="mt-4 text-foreground leading-relaxed">"{t.quote}"</blockquote>
-                <figcaption className="mt-6 text-sm">
-                  <div className="font-medium">{t.author}</div>
-                  <div className="text-muted-foreground">{t.company}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 9. Contact */}
       <section id="contact" className="relative overflow-hidden scroll-mt-24">
