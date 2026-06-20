@@ -236,30 +236,6 @@ function Index() {
         </div>
       </section>
 
-      {/* 8. Testimonials */}
-      <section id="testimonials" className="relative bg-gradient-surface scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-          <div className="max-w-2xl mb-14">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Testimonials</p>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-              What partners <span className="text-gradient">say.</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {testimonials.map((t) => (
-              <figure key={t.author} className="glass rounded-2xl p-8 shadow-card">
-                <Quote className="size-6 text-primary" />
-                <blockquote className="mt-4 text-foreground leading-relaxed">"{t.quote}"</blockquote>
-                <figcaption className="mt-6 text-sm">
-                  <div className="font-medium">{t.author}</div>
-                  <div className="text-muted-foreground">{t.company}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 9. Contact */}
       <section id="contact" className="relative overflow-hidden scroll-mt-24">
