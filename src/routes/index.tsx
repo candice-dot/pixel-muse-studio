@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
-import { ArrowUpRight, Compass, Palette, Film, CheckCircle2, Quote } from "lucide-react";
+import { ArrowUpRight, Compass, Palette, Film, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -59,13 +59,8 @@ const processSteps = [
   { step: "04", title: "Deliver & Scale", body: "Final production, on-site support and reusable assets." },
 ];
 
-const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce", "Event Lab"];
+const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce"];
 
-const testimonials = [
-  { quote: "Pixel Ink turned a complex global brief into a coherent, high-energy conference identity that held up across every stage and screen.", author: "Global Marketing Lead", company: "FMCG Brand" },
-  { quote: "Rare combination of strategic thinking and flawless execution — they delivered on time, on brand and beyond what we'd imagined.", author: "Brand Director", company: "Luxury Sector" },
-  { quote: "From first concept to live event, the team moved fast and held the quality bar. A genuine creative partner.", author: "Head of Events", company: "International Agency" },
-];
 
 function Index() {
   return (
@@ -165,7 +160,7 @@ function Index() {
 
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border shadow-card">
             <iframe
-              src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0"
+              src="https://player.vimeo.com/video/1126076436?title=0&byline=0&portrait=0"
               title="Pixel Ink Studio Showreel"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
