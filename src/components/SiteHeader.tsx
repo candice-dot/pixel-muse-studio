@@ -3,10 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 import logo from "@/assets/pixel-ink-logo.png";
 
 const nav = [
-  { to: "/work", label: "Work" },
-  { to: "/services", label: "Services" },
-  { to: "/studio", label: "Studio" },
-  { to: "/contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#work", label: "Work" },
+  { href: "/#process", label: "Process" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -21,22 +22,17 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              activeProps={{ className: "text-foreground" }}
-              className="hover:text-foreground transition-colors"
-            >
+            <a key={n.href} href={n.href} className="hover:text-foreground transition-colors">
               {n.label}
-            </Link>
+            </a>
           ))}
         </nav>
-        <Link
-          to="/contact"
+        <a
+          href="/#contact"
           className="inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-4 py-2 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition"
         >
           Start a project <ArrowUpRight className="size-4" />
-        </Link>
+        </a>
       </div>
     </header>
   );
