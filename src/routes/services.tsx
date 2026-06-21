@@ -6,9 +6,9 @@ import { ArrowUpRight, Compass, Palette, Film, Sparkles, CheckCircle2 } from "lu
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Pixel Ink Studio" },
-      { name: "description", content: "Strategy & creative, design & content, experience & execution — capabilities and our four-step process." },
-      { property: "og:title", content: "Services — Pixel Ink Studio" },
+      { title: "Services • Pixel Ink Studio" },
+      { name: "description", content: "Strategy & creative, design & content, experience & execution • capabilities and our four-step process." },
+      { property: "og:title", content: "Services • Pixel Ink Studio" },
       { property: "og:description", content: "What we do and how we work, from discovery to delivery." },
     ],
   }),
@@ -58,7 +58,7 @@ function ServicesPage() {
             What we <span className="text-gradient">do.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Four disciplines under one roof — strategy, design, motion and execution moving in sync,
+            Four disciplines under one roof • strategy, design, motion and execution moving in sync,
             without the handover tax.
           </p>
         </div>
@@ -101,7 +101,7 @@ function ServicesPage() {
                 </div>
                 <h3 className="font-display mt-4 text-2xl font-semibold">{p.title}</h3>
                 <p className="mt-3 text-muted-foreground">{p.body}</p>
-                <p className="mt-4 text-sm"><span className="text-muted-foreground">Outcome — </span>{p.outcome}</p>
+                <p className="mt-4 text-sm"><span className="text-muted-foreground">Outcome • </span>{p.outcome}</p>
               </div>
             ))}
           </div>

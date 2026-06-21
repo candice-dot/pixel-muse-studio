@@ -6,9 +6,9 @@ import { Mail, Phone, ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Pixel Ink Studio" },
+      { title: "Contact • Pixel Ink Studio" },
       { name: "description", content: "Let's create something exceptional. Email candice@pixel-ink.co.za or call +27 73 305 2114." },
-      { property: "og:title", content: "Contact — Pixel Ink Studio" },
+      { property: "og:title", content: "Contact • Pixel Ink Studio" },
       { property: "og:description", content: "Brief us on your next brand experience, film or campaign." },
     ],
   }),
@@ -28,7 +28,7 @@ function ContactPage() {
             Let's create something <span className="text-gradient">exceptional.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Tell us what you're building — we'll come back with a point of view, a plan and a
+            Tell us what you're building • we'll come back with a point of view, a plan and a
             timeline.
           </p>
         </div>
@@ -44,7 +44,7 @@ function ContactPage() {
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</p>
                 <p className="font-display mt-2 text-2xl">candice@pixel-ink.co.za</p>
-                <p className="mt-2 text-sm text-muted-foreground">Candice Ashwin — new business & creative partnerships</p>
+                <p className="mt-2 text-sm text-muted-foreground">Candice Ashwin • new business & creative partnerships</p>
               </div>
               <ArrowUpRight className="size-5 mt-1 opacity-50 group-hover:opacity-100 transition" />
             </a>
@@ -56,7 +56,7 @@ function ContactPage() {
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phone</p>
                 <p className="font-display mt-2 text-2xl">+27 73 305 2114</p>
-                <p className="mt-2 text-sm text-muted-foreground">Mon–Fri · South Africa Standard Time</p>
+                <p className="mt-2 text-sm text-muted-foreground">Mon to Fri · South Africa Standard Time</p>
               </div>
               <ArrowUpRight className="size-5 mt-1 opacity-50 group-hover:opacity-100 transition" />
             </a>

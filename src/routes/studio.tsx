@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/studio")({
   head: () => ({
     meta: [
-      { title: "Studio — Pixel Ink Studio" },
-      { name: "description", content: "Who we are and why brands choose Pixel Ink — 15+ years delivering brand experiences across strategy, design, motion and live execution." },
-      { property: "og:title", content: "Studio — Pixel Ink Studio" },
+      { title: "Studio • Pixel Ink Studio" },
+      { name: "description", content: "Who we are and why brands choose Pixel Ink • 15+ years delivering brand experiences across strategy, design, motion and live execution." },
+      { property: "og:title", content: "Studio • Pixel Ink Studio" },
       { property: "og:description", content: "A brand and content design studio specialising in high-impact experiences." },
     ],
   }),
@@ -46,7 +46,7 @@ function StudioPage() {
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             Pixel Ink Studio is a brand and content design studio specialising in high-impact brand
             experiences. With over 15 years of experience, we partner with global and regional brands
-            to create meaningful, visually powerful campaigns — across live events, content and
+            to create meaningful, visually powerful campaigns • across live events, content and
             digital platforms.
           </p>
         </div>
@@ -73,7 +73,7 @@ function StudioPage() {
         <div className="mx-auto max-w-7xl px-6 py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-              We don't just design visuals — we design <span className="text-gradient">experiences that work</span> in real-world environments.
+              We don't just design visuals • we design <span className="text-gradient">experiences that work</span> in real-world environments.
             </h2>
           </div>
           <div>
