@@ -10,11 +10,15 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pixel Ink Studio — Brand • Content • Experience Design" },
-      { name: "description", content: "A brand and content design studio creating high-impact experiences across design, motion, video and strategy. 15+ years partnering with global brands." },
-      { property: "og:title", content: "Pixel Ink Studio — Built to Deliver" },
-      { property: "og:description", content: "Design, motion, video and strategy for brands that need to move." },
+      { title: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
+      { name: "description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
+      { property: "og:title", content: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
+      { property: "og:description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://pixelinkstudio.co.za/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://pixelinkstudio.co.za/" },
     ],
   }),
   component: Index,
@@ -79,11 +83,12 @@ function Index() {
             Brand • Content • Experience Design
           </span>
           <h1 className="font-display mt-6 text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight max-w-5xl">
-            Built to <span className="text-gradient">deliver.</span>
+            Pixel Ink Studio — built to <span className="text-gradient">deliver.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Pixel Ink Studio partners with global and regional brands to create meaningful, visually
-            powerful campaigns — across live events, content and digital platforms.
+            Pixel Ink Studio is a Johannesburg-based creative and production agency partnering with
+            global and regional brands to deliver brand experiences, event creative, design,
+            content and production across Africa.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
