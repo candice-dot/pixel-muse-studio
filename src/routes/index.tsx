@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroBg from "@/assets/hero-bg.jpg";
-import work1 from "@/assets/work-1.jpg";
+import heroKv from "@/assets/pixel-kv-hero.png.asset.json";
+import heineken from "@/assets/heineken-case.png.asset.json";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import { ArrowUpRight, Compass, Palette, Film, CheckCircle2 } from "lucide-react";
@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
-      { name: "description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
+      { name: "description", content: "Pixel Ink Studio is a Johannesburg based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
       { property: "og:title", content: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
-      { property: "og:description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
+      { property: "og:description", content: "Pixel Ink Studio is a Johannesburg based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://pixelinkstudio.co.za/" },
     ],
@@ -44,23 +44,23 @@ const capabilities = [
   {
     icon: Film,
     title: "Experience & Execution",
-    items: ["3D & 2D animation", "On-screen and environmental design", "End-to-end content delivery"],
+    items: ["3D & 2D animation", "On screen and environmental design", "End to end content delivery"],
   },
 ];
 
 const cases = [
-  { img: work1, tag: "Global Conference", title: "Heineken — Make It Personal", sub: "Motion-led visual system across stage, screens and content for the 2025 Global Marketing, Sales & Distribution Conference." },
-  { img: work2, tag: "Brand Film", title: "Coca-Cola — Unified for Purpose", sub: "AI-assisted opening film synchronised to live spoken-word performance for the Culture Conference." },
-  { img: work3, tag: "Brand Experience", title: "SAB — Evolving Firsts", sub: "An immersive \"living brand museum\" across OLED, holographic cubes and curved LED." },
-  { img: work1, tag: "Brand System", title: "Marriott Residences JVC", sub: "A refined Urban Chic identity and marketing system for a premium Dubai development." },
-  { img: work2, tag: "Experiential Campaign", title: "Rolls-Royce — Customise Your Journey", sub: "Multi-city, multi-sensory brand environments across Middle East markets." },
+  { img: heineken.url, tag: "Global Conference", title: "Heineken • Make It Personal", sub: "Motion led visual system across stage, screens and content for the 2025 Global Marketing, Sales & Distribution Conference." },
+  { img: work2, tag: "Brand Film", title: "Coca-Cola • Unified for Purpose", sub: "AI assisted opening film synchronised to live spoken word performance for the Culture Conference." },
+  { img: work3, tag: "Brand Experience", title: "SAB • Evolving Firsts", sub: "An immersive \"living brand museum\" across OLED, holographic cubes and curved LED." },
+  { img: heineken.url, tag: "Brand System", title: "Marriott Residences JVC", sub: "A refined Urban Chic identity and marketing system for a premium Dubai development." },
+  { img: work2, tag: "Experiential Campaign", title: "Rolls-Royce • Customise Your Journey", sub: "Multi city, multi sensory brand environments across Middle East markets." },
 ];
 
 const processSteps = [
   { step: "01", title: "Discover", body: "Align on audience, objectives, context and success metrics." },
   { step: "02", title: "Shape", body: "Define the concept, narrative and visual language." },
   { step: "03", title: "Design & Build", body: "Produce systems, motion and assets ready for execution." },
-  { step: "04", title: "Deliver & Scale", body: "Final production, on-site support and reusable assets." },
+  { step: "04", title: "Deliver & Scale", body: "Final production, on site support and reusable assets." },
 ];
 
 const clients = ["Heineken", "Coca-Cola", "Marriott", "SAB", "Rolls-Royce"];
@@ -71,32 +71,42 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SiteHeader />
 
-      {/* 1. Hero */}
+      {/* 1. Hero — 16:9 KV with copy on left */}
       <section id="top" className="relative isolate overflow-hidden scroll-mt-24">
-        <img src={heroBg} alt="" width={1920} height={1080} className="absolute inset-0 -z-10 h-full w-full object-cover opacity-70" />
-        <div className="absolute inset-0 -z-10 bg-gradient-hero" />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-b from-transparent to-background" />
+        <div className="relative w-full aspect-[16/9] min-h-[640px]">
+          <img
+            src={heroKv.url}
+            alt="Pixel Ink Studio key visual"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          {/* Left side dark overlay for legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
 
-        <div className="mx-auto max-w-7xl px-6 pt-40 pb-32 md:pt-56 md:pb-44">
-          <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            <span className="size-1.5 rounded-full bg-primary shadow-glow" />
-            Brand • Content • Experience Design
-          </span>
-          <h1 className="font-display mt-6 text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight max-w-5xl">
-            Pixel Ink Studio — built to <span className="text-gradient">deliver.</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Pixel Ink Studio is a Johannesburg-based creative and production agency partnering with
-            global and regional brands to deliver brand experiences, event creative, design,
-            content and production across Africa.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
-              View our work <ArrowUpRight className="size-4" />
-            </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/5 transition">
-              Start a conversation
-            </a>
+          <div className="relative z-10 mx-auto max-w-7xl px-6 h-full flex items-center">
+            <div className="max-w-2xl pt-24">
+              <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="size-1.5 rounded-full bg-primary shadow-glow" />
+                Brand • Content • Experience Design
+              </span>
+              <h1 className="font-script mt-8 text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight">
+                Pixel Ink Studio,<br />
+                <span className="text-gradient">built to deliver.</span>
+              </h1>
+              <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
+                A Johannesburg based creative and production agency partnering with
+                global and regional brands to deliver brand experiences, event creative,
+                design, content and production across Africa.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
+                  View our work <ArrowUpRight className="size-4" />
+                </a>
+                <a href="#contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/10 transition">
+                  Start a conversation
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -106,7 +116,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {stats.map((s) => (
             <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl font-semibold text-gradient">{s.k}</div>
+              <div className="font-display text-5xl md:text-6xl text-gradient">{s.k}</div>
               <div className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">{s.v}</div>
             </div>
           ))}
@@ -118,11 +128,11 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">About / What we do</p>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-              A brand and content studio for <span className="text-gradient">high-impact experiences.</span>
+            <h2 className="font-script mt-4 text-5xl md:text-6xl leading-[0.95]">
+              A brand and content studio for <span className="text-gradient">high impact experiences.</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Four disciplines under one roof — strategy, design, motion and execution moving in sync,
+              Four disciplines under one roof. Strategy, design, motion and execution moving in sync,
               without the handover tax.
             </p>
           </div>
@@ -133,7 +143,7 @@ function Index() {
                 <div className="inline-flex items-center justify-center size-12 rounded-xl bg-gradient-brand shadow-glow">
                   <c.icon className="size-5 text-primary-foreground" />
                 </div>
-                <h3 className="font-display mt-6 text-xl font-semibold">{c.title}</h3>
+                <h3 className="font-display mt-6 text-2xl tracking-wide">{c.title}</h3>
                 <ul className="mt-4 space-y-2 text-muted-foreground text-sm">
                   {c.items.map((it) => (
                     <li key={it} className="flex items-start gap-2">
@@ -154,7 +164,7 @@ function Index() {
           <div className="flex flex-wrap items-end justify-between gap-6 mb-10">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Showreel</p>
-              <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+              <h2 className="font-script mt-4 text-5xl md:text-6xl leading-[0.95]">
                 Work in <span className="text-gradient">motion.</span>
               </h2>
             </div>
@@ -181,7 +191,7 @@ function Index() {
           <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Selected work</p>
-              <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+              <h2 className="font-script mt-4 text-5xl md:text-6xl leading-[0.95]">
                 Stories we've <span className="text-gradient">shipped.</span>
               </h2>
             </div>
@@ -193,12 +203,12 @@ function Index() {
           <div className="space-y-6">
             {cases.map((c, i) => (
               <article key={c.title} className={`grid md:grid-cols-2 gap-0 overflow-hidden rounded-2xl border border-border ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                <div className="relative aspect-[4/3] md:aspect-auto">
+                <div className="relative aspect-[4/3]">
                   <img src={c.img} alt={c.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <div className="p-8 md:p-12 bg-gradient-surface flex flex-col justify-center">
                   <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{c.tag}</span>
-                  <h3 className="font-display mt-3 text-2xl md:text-3xl font-semibold tracking-tight">{c.title}</h3>
+                  <h3 className="font-display mt-3 text-3xl md:text-4xl tracking-wide">{c.title}</h3>
                   <p className="mt-4 text-muted-foreground">{c.sub}</p>
                 </div>
               </article>
@@ -212,7 +222,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Our process</p>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+            <h2 className="font-script mt-4 text-5xl md:text-6xl leading-[0.95]">
               Discover. Shape. <span className="text-gradient">Deliver.</span>
             </h2>
           </div>
@@ -220,8 +230,8 @@ function Index() {
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {processSteps.map((p) => (
               <div key={p.step} className="rounded-2xl border border-border p-8 hover:border-primary/40 transition">
-                <div className="font-display text-3xl text-gradient">{p.step}</div>
-                <h3 className="font-display mt-4 text-xl font-semibold">{p.title}</h3>
+                <div className="font-display text-4xl text-gradient">{p.step}</div>
+                <h3 className="font-display mt-4 text-2xl tracking-wide">{p.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{p.body}</p>
               </div>
             ))}
@@ -235,29 +245,28 @@ function Index() {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center">In good company</p>
           <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-muted-foreground">
             {clients.map((c) => (
-              <span key={c} className="font-display text-xl md:text-2xl opacity-70 hover:opacity-100 transition">{c}</span>
+              <span key={c} className="font-display text-2xl md:text-3xl opacity-70 hover:opacity-100 transition">{c}</span>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* 9. Contact */}
       <section id="contact" className="relative overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 -z-10 bg-gradient-hero opacity-90" />
         <div className="mx-auto max-w-5xl px-6 py-28 md:py-40 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Get in touch</p>
-          <h2 className="font-display mt-4 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+          <h2 className="font-script mt-4 text-6xl md:text-8xl leading-[0.9]">
             Let's create something <span className="text-gradient">exceptional.</span>
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
-            Tell us what you're building — we'll come back with a point of view, a plan and a timeline.
+            Tell us what you're building. We'll come back with a point of view, a plan and a timeline.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
               Book a 15-minute call <ArrowUpRight className="size-4" />
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/5 transition">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground/10 transition">
               Send a brief
             </Link>
           </div>

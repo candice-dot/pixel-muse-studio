@@ -12,7 +12,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
 
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat Brush", "Bebas Neue", cursive;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --color-background: var(--background);
@@ -38,50 +39,50 @@
   --color-electric: var(--electric);
 }
 
-/* Pixel Ink Studio — light theme */
+/* Pixel Ink Studio • dark blue gradient palette */
 :root {
   --radius: 0.875rem;
 
-  --background: oklch(0.995 0.003 80);          /* near-white cream */
-  --foreground: oklch(0.16 0.02 280);           /* near-black */
+  --background: oklch(0.14 0.04 270);           /* deep navy */
+  --foreground: oklch(0.98 0.005 280);          /* near white */
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0.02 280);
+  --card: oklch(0.18 0.05 270);
+  --card-foreground: oklch(0.98 0.005 280);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.02 280);
+  --popover: oklch(0.18 0.05 270);
+  --popover-foreground: oklch(0.98 0.005 280);
 
-  --primary: oklch(0.62 0.25 330);              /* magenta */
+  --primary: oklch(0.65 0.27 330);              /* magenta */
   --primary-foreground: oklch(0.99 0.005 280);
 
-  --secondary: oklch(0.96 0.01 280);
-  --secondary-foreground: oklch(0.20 0.02 280);
+  --secondary: oklch(0.22 0.05 270);
+  --secondary-foreground: oklch(0.98 0.005 280);
 
-  --muted: oklch(0.965 0.008 280);
-  --muted-foreground: oklch(0.46 0.02 280);
+  --muted: oklch(0.22 0.04 270);
+  --muted-foreground: oklch(0.72 0.03 270);
 
-  --accent: oklch(0.62 0.22 260);               /* electric blue accent */
+  --accent: oklch(0.65 0.24 260);               /* electric blue */
   --accent-foreground: oklch(0.99 0.005 280);
 
   --destructive: oklch(0.62 0.22 25);
   --destructive-foreground: oklch(0.99 0.005 280);
 
-  --border: oklch(0.16 0.02 280 / 10%);
-  --input: oklch(0.16 0.02 280 / 14%);
-  --ring: oklch(0.62 0.25 330 / 0.5);
+  --border: oklch(0.98 0.005 280 / 10%);
+  --input: oklch(0.98 0.005 280 / 14%);
+  --ring: oklch(0.65 0.27 330 / 0.5);
 
-  --magenta: oklch(0.62 0.25 330);
-  --electric: oklch(0.62 0.22 260);
+  --magenta: oklch(0.65 0.27 330);
+  --electric: oklch(0.65 0.24 260);
 
   /* Gradients & glows */
-  --gradient-brand: linear-gradient(135deg, oklch(0.62 0.25 330) 0%, oklch(0.62 0.22 260) 100%);
-  --gradient-hero: radial-gradient(60% 80% at 20% 30%, oklch(0.62 0.25 330 / 0.10) 0%, transparent 70%),
-                   radial-gradient(50% 70% at 85% 70%, oklch(0.62 0.22 260 / 0.10) 0%, transparent 70%),
-                   linear-gradient(180deg, oklch(0.995 0.003 80) 0%, oklch(0.97 0.005 80) 100%);
-  --gradient-surface: linear-gradient(180deg, oklch(0.985 0.004 80) 0%, oklch(0.96 0.006 80) 100%);
+  --gradient-brand: linear-gradient(135deg, oklch(0.65 0.27 330) 0%, oklch(0.65 0.24 260) 100%);
+  --gradient-hero: radial-gradient(60% 80% at 20% 30%, oklch(0.65 0.27 330 / 0.25) 0%, transparent 70%),
+                   radial-gradient(50% 70% at 85% 70%, oklch(0.65 0.24 260 / 0.30) 0%, transparent 70%),
+                   linear-gradient(180deg, oklch(0.10 0.05 270) 0%, oklch(0.16 0.05 270) 100%);
+  --gradient-surface: linear-gradient(180deg, oklch(0.16 0.04 270) 0%, oklch(0.20 0.05 270) 100%);
 
-  --shadow-glow: 0 20px 60px -20px oklch(0.62 0.25 330 / 0.35);
-  --shadow-card: 0 14px 40px -18px oklch(0.16 0.02 280 / 0.18);
+  --shadow-glow: 0 20px 60px -20px oklch(0.65 0.27 330 / 0.55);
+  --shadow-card: 0 14px 40px -18px oklch(0 0 0 / 0.6);
 
   --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -99,14 +100,19 @@
   }
 
   ::selection {
-    background: oklch(0.62 0.25 330 / 0.25);
+    background: oklch(0.65 0.27 330 / 0.35);
     color: var(--foreground);
   }
 }
 
 @utility font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+  letter-spacing: 0.005em;
 }
 
 @utility text-gradient {
@@ -137,8 +143,7 @@
 }
 
 @utility glass {
-  background: oklch(1 0 0 / 0.7);
+  background: oklch(0.18 0.05 270 / 0.55);
   backdrop-filter: blur(14px);
-  border: 1px solid oklch(0.16 0.02 280 / 0.08);
+  border: 1px solid oklch(0.98 0.005 280 / 0.08);
 }
-

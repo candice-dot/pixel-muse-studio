@@ -9,9 +9,9 @@ import work3 from "@/assets/work-3.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Pixel Ink Studio" },
-      { name: "description", content: "Selected case studies — SAB, Heineken, Marriott, Rolls-Royce, Coca-Cola, Event Lab." },
-      { property: "og:title", content: "Work — Pixel Ink Studio" },
+      { title: "Work • Pixel Ink Studio" },
+      { name: "description", content: "Selected case studies • SAB, Heineken, Marriott, Rolls-Royce, Coca-Cola, Event Lab." },
+      { property: "og:title", content: "Work • Pixel Ink Studio" },
       { property: "og:description", content: "Brand films, conferences and campaign systems for global brands." },
     ],
   }),
@@ -22,19 +22,19 @@ const cases = [
   {
     img: work1,
     tag: "Brand Experience",
-    title: "SAB — Evolving Firsts",
+    title: "SAB • Evolving Firsts",
     sub: "An Evening of Transformation",
     objective: "Reposition SAB's heritage as a living, evolving brand through a premium, immersive experience.",
-    solution: "A \"living brand museum\" with visuals for OLED screens, holographic cubes and curved LED — blending heritage storytelling with modern digital execution.",
+    solution: "A \"living brand museum\" with visuals for OLED screens, holographic cubes and curved LED • blending heritage storytelling with modern digital execution.",
     outcome: "High-impact brand experience with strong narrative coherence and elevated perception of innovation and legacy.",
   },
   {
     img: work2,
     tag: "Global Conference",
-    title: "Heineken — Make It Personal",
+    title: "Heineken • Make It Personal",
     sub: "Global Marketing, Sales & Distribution Conference 2025",
     objective: "Create a dynamic, future-focused conference identity aligned to Heineken's global brand ethos.",
-    solution: "Motion-led visual system with layered gradients and kinetic design — consistent branding across stage, screens and content.",
+    solution: "Motion-led visual system with layered gradients and kinetic design • consistent branding across stage, screens and content.",
     outcome: "Strong brand immersion with high-energy, modern visual language and a scalable system for multi-platform use.",
   },
   {
@@ -49,7 +49,7 @@ const cases = [
   {
     img: work1,
     tag: "Experiential Campaign",
-    title: "Rolls-Royce — Customise Your Journey",
+    title: "Rolls-Royce • Customise Your Journey",
     sub: "Urban Drive across Middle East markets",
     objective: "Reposition Rolls-Royce as a modern luxury lifestyle brand for a younger, design-conscious audience.",
     solution: "Multi-city experiential events with immersive lifestyle moments and multi-sensory brand environments.",
@@ -58,16 +58,16 @@ const cases = [
   {
     img: work2,
     tag: "Brand Film",
-    title: "Coca-Cola — Unified for Purpose",
+    title: "Coca-Cola • Unified for Purpose",
     sub: "Culture Conference Opening Film",
     objective: "Create an emotionally engaging opening for the Coca-Cola Culture Conference around unity and shared purpose.",
-    solution: "AI-assisted visual film synchronised to live spoken-word performance — fluid, emotive imagery paced to poetry cadence.",
+    solution: "AI-assisted visual film synchronised to live spoken-word performance • fluid, emotive imagery paced to poetry cadence.",
     outcome: "A memorable, immersive opening that set the tone for the conference and aligned to a people-first ethos.",
   },
   {
     img: work3,
     tag: "Digital-First",
-    title: "Event Lab — Jobseekers Campaign",
+    title: "Event Lab • Jobseekers Campaign",
     sub: "Educate, empower, prepare",
     objective: "Support job seekers entering the events industry with practical recruitment guidance.",
     solution: "CV structure and ATS optimisation, professional formatting guidance and short-form digital content.",
@@ -88,7 +88,7 @@ function WorkPage() {
             Stories we've <span className="text-gradient">shipped.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Case studies from across live events, content and digital — work performing in
+            Case studies from across live events, content and digital • work performing in
             real-world environments where brand perception matters most.
           </p>
         </div>
