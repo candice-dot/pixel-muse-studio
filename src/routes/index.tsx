@@ -10,11 +10,15 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pixel Ink Studio — Brand • Content • Experience Design" },
-      { name: "description", content: "A brand and content design studio creating high-impact experiences across design, motion, video and strategy. 15+ years partnering with global brands." },
-      { property: "og:title", content: "Pixel Ink Studio — Built to Deliver" },
-      { property: "og:description", content: "Design, motion, video and strategy for brands that need to move." },
+      { title: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
+      { name: "description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
+      { property: "og:title", content: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
+      { property: "og:description", content: "Pixel Ink Studio is a Johannesburg-based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://pixelinkstudio.co.za/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://pixelinkstudio.co.za/" },
     ],
   }),
   component: Index,
