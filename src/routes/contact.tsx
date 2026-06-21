@@ -56,7 +56,7 @@ function ContactPage() {
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phone</p>
                 <p className="font-display mt-2 text-2xl">+27 73 305 2114</p>
-                <p className="mt-2 text-sm text-muted-foreground">Mon–Fri · South Africa Standard Time</p>
+                <p className="mt-2 text-sm text-muted-foreground">Mon to Fri · South Africa Standard Time</p>
               </div>
               <ArrowUpRight className="size-5 mt-1 opacity-50 group-hover:opacity-100 transition" />
             </a>
