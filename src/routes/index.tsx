@@ -1,13 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroKv from "@/assets/pixel-kv-hero.png.asset.json";
+import heroKv from "@/assets/hero-kv-bg.png.asset.json";
+import clientLogos from "@/assets/client-logo-strip.png.asset.json";
 import heineken from "@/assets/heineken-case.png.asset.json";
 import marriott from "@/assets/marriott-case.png.asset.json";
 import rolls from "@/assets/rolls-royce-case.png.asset.json";
 import sab from "@/assets/sab-case.png.asset.json";
-import heinekenLogo from "@/assets/heineken-logo.png.asset.json";
-import marriottLogo from "@/assets/marriott-logo.png.asset.json";
-import rollsLogo from "@/assets/rolls-royce-logo.jpg.asset.json";
-import sabLogo from "@/assets/sab-logo.png.asset.json";
 import { ArrowUpRight, Compass, Palette, Film, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -21,9 +18,35 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Pixel Ink Studio is a Johannesburg based creative and production agency delivering brand experiences, event creative, design, content and production solutions across Africa." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://pixelinkstudio.co.za/" },
+      { property: "og:site_name", content: "Pixel Ink Studio" },
+      { property: "og:image", content: `https://pixelinkstudio.co.za${heroKv.url}` },
+      { property: "og:image:width", content: "1600" },
+      { property: "og:image:height", content: "900" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Pixel Ink Studio | Creative & Production Agency Johannesburg" },
+      { name: "twitter:description", content: "Brand experiences, event creative, design, content and production across Africa." },
+      { name: "twitter:image", content: `https://pixelinkstudio.co.za${heroKv.url}` },
+      { name: "keywords", content: "creative agency Johannesburg, production agency South Africa, brand experience, event creative, motion design, content production, Pixel Ink Studio" },
+      { name: "author", content: "Pixel Ink Studio" },
+      { name: "robots", content: "index, follow" },
     ],
     links: [
       { rel: "canonical", href: "https://pixelinkstudio.co.za/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Pixel Ink Studio",
+          url: "https://pixelinkstudio.co.za/",
+          logo: `https://pixelinkstudio.co.za${heroKv.url}`,
+          description: "Johannesburg based creative and production agency delivering brand experiences, event creative, design, content and production across Africa.",
+          address: { "@type": "PostalAddress", addressLocality: "Johannesburg", addressCountry: "ZA" },
+          areaServed: "Africa",
+        }),
+      },
     ],
   }),
   component: Index,
@@ -67,22 +90,26 @@ const processSteps = [
   { step: "04", title: "Deliver & Scale", body: "Final production, on site support and reusable assets." },
 ];
 
-const clients = [
-  { name: "Heineken", logo: heinekenLogo.url },
-  { name: "Marriott", logo: marriottLogo.url },
-  { name: "Rolls-Royce", logo: rollsLogo.url },
-  { name: "SAB", logo: sabLogo.url },
-];
 
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SiteHeader />
 
-      {/* 1. Hero — KV with copy stacked left, no clipping */}
-      <section id="top" className="relative isolate overflow-hidden scroll-mt-24 bg-gradient-hero">
-        <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 md:pt-40 md:pb-28 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-xl">
+      {/* 1. Hero — full-bleed KV background, text left-aligned */}
+      <section id="top" className="relative isolate overflow-hidden scroll-mt-24 min-h-screen flex items-center">
+        <img
+          src={heroKv.url}
+          alt="Pixel Ink Studio key visual"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-right"
+          fetchPriority="high"
+        />
+        {/* Gradient overlays to keep left-side copy readable */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/10" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/80 via-transparent to-background/30" />
+
+        <div className="relative mx-auto max-w-7xl w-full px-6 pt-36 pb-24 md:pt-44 md:pb-32">
+          <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               <span className="size-1.5 rounded-full bg-primary shadow-glow" />
               Brand • Content • Experience Design
@@ -91,7 +118,7 @@ function Index() {
               Pixel Ink Studio,<br />
               <span className="text-gradient">built to deliver.</span>
             </h1>
-            <p className="mt-6 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed">
               A Johannesburg based creative and production agency partnering with
               global and regional brands to deliver brand experiences, event creative,
               design, content and production across Africa.
@@ -104,14 +131,6 @@ function Index() {
                 Start a conversation
               </a>
             </div>
-          </div>
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-border shadow-card">
-            <img
-              src={heroKv.url}
-              alt="Pixel Ink Studio key visual"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent" />
           </div>
         </div>
       </section>
@@ -248,16 +267,13 @@ function Index() {
       <section id="clients" className="relative scroll-mt-24">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center">In good company</p>
-          <div className="mt-10 flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
-            {clients.map((c) => (
-              <img
-                key={c.name}
-                src={c.logo}
-                alt={c.name}
-                loading="lazy"
-                className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition brightness-0 invert"
-              />
-            ))}
+          <div className="mt-10 flex justify-center">
+            <img
+              src={clientLogos.url}
+              alt="Clients including Marriott, Heineken, Rolls-Royce, Coca-Cola and SAB"
+              loading="lazy"
+              className="w-full max-w-5xl h-auto object-contain"
+            />
           </div>
         </div>
       </section>
