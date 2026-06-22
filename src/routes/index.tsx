@@ -64,12 +64,6 @@ const processSteps = [
   { step: "04", title: "Deliver & Scale", body: "Final production, on site support and reusable assets." },
 ];
 
-const clients = [
-  { name: "Heineken", logo: heinekenLogo.url },
-  { name: "Marriott", logo: marriottLogo.url },
-  { name: "Rolls-Royce", logo: rollsLogo.url },
-  { name: "SAB", logo: sabLogo.url },
-];
 
 function Index() {
   return (
