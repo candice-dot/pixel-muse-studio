@@ -241,16 +241,13 @@ function Index() {
       <section id="clients" className="relative scroll-mt-24">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center">In good company</p>
-          <div className="mt-10 flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
-            {clients.map((c) => (
-              <img
-                key={c.name}
-                src={c.logo}
-                alt={c.name}
-                loading="lazy"
-                className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition brightness-0 invert"
-              />
-            ))}
+          <div className="mt-10 flex justify-center">
+            <img
+              src={clientLogos.url}
+              alt="Clients including Marriott, Heineken, Rolls-Royce, Coca-Cola and SAB"
+              loading="lazy"
+              className="w-full max-w-5xl h-auto object-contain"
+            />
           </div>
         </div>
       </section>
