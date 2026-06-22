@@ -70,10 +70,20 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SiteHeader />
 
-      {/* 1. Hero — KV with copy stacked left, no clipping */}
-      <section id="top" className="relative isolate overflow-hidden scroll-mt-24 bg-gradient-hero">
-        <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 md:pt-40 md:pb-28 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-xl">
+      {/* 1. Hero — full-bleed KV background, text left-aligned */}
+      <section id="top" className="relative isolate overflow-hidden scroll-mt-24 min-h-screen flex items-center">
+        <img
+          src={heroKv.url}
+          alt="Pixel Ink Studio key visual"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-right"
+          fetchPriority="high"
+        />
+        {/* Gradient overlays to keep left-side copy readable */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/10" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/80 via-transparent to-background/30" />
+
+        <div className="relative mx-auto max-w-7xl w-full px-6 pt-36 pb-24 md:pt-44 md:pb-32">
+          <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               <span className="size-1.5 rounded-full bg-primary shadow-glow" />
               Brand • Content • Experience Design
@@ -82,7 +92,7 @@ function Index() {
               Pixel Ink Studio,<br />
               <span className="text-gradient">built to deliver.</span>
             </h1>
-            <p className="mt-6 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed">
               A Johannesburg based creative and production agency partnering with
               global and regional brands to deliver brand experiences, event creative,
               design, content and production across Africa.
@@ -95,14 +105,6 @@ function Index() {
                 Start a conversation
               </a>
             </div>
-          </div>
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-border shadow-card">
-            <img
-              src={heroKv.url}
-              alt="Pixel Ink Studio key visual"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent" />
           </div>
         </div>
       </section>
