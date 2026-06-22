@@ -1,13 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroKv from "@/assets/pixel-kv-hero.png.asset.json";
+import heroKv from "@/assets/hero-kv-bg.png.asset.json";
+import clientLogos from "@/assets/client-logo-strip.png.asset.json";
 import heineken from "@/assets/heineken-case.png.asset.json";
 import marriott from "@/assets/marriott-case.png.asset.json";
 import rolls from "@/assets/rolls-royce-case.png.asset.json";
 import sab from "@/assets/sab-case.png.asset.json";
-import heinekenLogo from "@/assets/heineken-logo.png.asset.json";
-import marriottLogo from "@/assets/marriott-logo.png.asset.json";
-import rollsLogo from "@/assets/rolls-royce-logo.jpg.asset.json";
-import sabLogo from "@/assets/sab-logo.png.asset.json";
 import { ArrowUpRight, Compass, Palette, Film, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
